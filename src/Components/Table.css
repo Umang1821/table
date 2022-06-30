@@ -1,0 +1,24 @@
+.Table {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+    
+  table {
+    border: 5px solid black;
+    width: 1020px;
+    height: 400px;
+  }
+    
+  th {
+    border-bottom: 1px solid black;
+    text-align: center;
+    
+  }
+    
+  td {
+    text-align: center;
+  }

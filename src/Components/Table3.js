@@ -1,47 +1,44 @@
 import React from 'react'
 import './Table.css'
 
+const getDatafromLS=()=>{
+  const data = localStorage.getItem('sno');
+  console.log(JSON.parse(data));
+  if(data){
+    return JSON.parse(data);
+  }
+  else{
+    return []
+  }
+}
 
-    const data = [
-        { sno:1, name: "Anom", skills: "Java", projectassigned: "No", },
-        { sno:2,name: "Megha", skills :"Java", projectassigned: "No" },
-        { sno:3,name: "Subham", skills :"Html,css", projectassigned: "No"},
-        { sno:4,name: "Amit", skills :"Html,css", projectassigned: "No"},
-        { sno:5,name: "Gokul", skills :"Html,css", projectassigned: "No"},
-        { sno:6,name: "Ashish", skills :"Html,css", projectassigned: "No"},
-        { sno:7,name: "Aditya", skills :"Html,css", projectassigned: "No"},
-        { sno:8,name: "Anam", skills :"Html,css", projectassigned: "No"},
-        { sno:9,name: "Shardul", skills :"Html,css", projectassigned: "No"},
-        { sno:10,name: "Virat", skills :"Html,css", projectassigned: "No"},
-
-      ]
         
       function Table3() {
         return (
-          <div className="Table">
-            <table>
-              <tr>
-                <th>SNo</th>
-                <th>Name</th>
-                <th>Skills</th>
-                <th>Project Assigned</th>
-                <th>Comment</th>
-              </tr>
-              {data.map((val, key) => {
-                return (
-                  <tr key={key}>
-                    <td>{val.sno}</td>
-                    <td>{val.name}</td>
-                    <td>{val.skills}</td>
-                    <td>{val.projectassigned}</td>
-                    <td>{val.comment}</td>
+          <div className='Table'>
+          {
+          <>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>sno</th>
+                    <th>Name</th>
+                    <th>Skills</th>
+                    <th>Comment</th>
                   </tr>
-                )
-              })}
-            </table>
-          </div>
-        );
-      }
+                </thead>
+                
+              </table>
+            </div>
+           
+          </>}
+        </div>
+
+      
+  )
+}
+        
      
 
 export default Table3
